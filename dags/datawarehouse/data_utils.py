@@ -1,5 +1,5 @@
 from airflow.providers.postgres.hooks.postgres import PostgresHook
-from pyscopg2.extras import RealDictCursor
+from psycopg2.extras import RealDictCursor
 
 table = "yt_api"
 
@@ -37,7 +37,7 @@ def create_table(schema):
                 "Duration" VARCHAR(20) NOT NULL,
                 "Video_Views" INT,
                 "Likes_Count" INT,
-                "Comments_Count" INT,
+                "Comments_Count" INT
             );
         """
     else:
@@ -50,7 +50,7 @@ def create_table(schema):
                 "Video_Type" VARCHAR(10) NOT NULL,
                 "Video_Views" INT,
                 "Likes_Count" INT,
-                "Comments_Count" INT,
+                "Comments_Count" INT
             );
         """
 
