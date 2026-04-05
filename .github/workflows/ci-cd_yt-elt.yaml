@@ -38,7 +38,7 @@ jobs:
         run: |
           docker buildx build --push \
           --tag ${{ vars.DOCKERHUB_USERNAME }}/${{vars.DOCKERHUB_REPOSITORY}}:latest \
-          --tage ${{ vars.DOCKERHUB_USERNAME }}/${{vars.DOCKERHUB_REPOSITORY}}:${{ github.sha }} \
+          --tag ${{ vars.DOCKERHUB_USERNAME }}/${{vars.DOCKERHUB_REPOSITORY}}:${{ github.sha }} \
           .
   unit-and-integration-and-e2e-tests:
     runs-on: ubuntu-latest
