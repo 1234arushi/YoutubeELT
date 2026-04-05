@@ -82,6 +82,9 @@ jobs:
       - name: Set up docker-compose
         if: steps.changed-files-tests.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         run: docker compose up -d
+
+      - name: Wait for services
+        run: sleep 30
       - name: Run unit and integration tests
         if: steps.changed-files-tests.outputs.any_changed == 'true' || github.event_name == 'workflow_dispatch'
         run: docker exec -t airflow-worker sh -c "pytest tests/ -v"
