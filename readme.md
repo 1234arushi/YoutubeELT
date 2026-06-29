@@ -4,4 +4,4 @@ Built a data pipeline to extract YouTube channel analytics using the YouTube Dat
 
 *Example analysis performed on the MrBeast YouTube channel.*
 
-*Phase-2 Incoming 🚀*
+***Phase-2 Incoming 🚀***
